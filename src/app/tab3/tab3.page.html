@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">
+      Eliminar Publicacion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+ 
+    <ion-card-header>
+   
+      <ion-card-title><h1>Ingrese datos </h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioModificar" > 
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="add-outline"></ion-icon>Id Publicación</ion-label>
+          <ion-input formControlName="id" [(ngModel)]="publicacion.id"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="attach"></ion-icon>Url</ion-label>
+          <ion-input formControlName="publicacion" [(ngModel)]="publicacion.publicacion"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="create-outline"></ion-icon>Descripción</ion-label>
+          <ion-input formControlName="descripcion" [(ngModel)]="publicacion.descripcion"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-segment [(ngModel)]="relationship" color="primary">
+        <ion-segment-button (click)="modificarPublicacion()"  value="registrar">
+          Aceptar
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-content>
+    </ion-card>
+</ion-content>

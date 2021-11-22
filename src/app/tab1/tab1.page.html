@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">
+      Publicaciones
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input [(ngModel)]='publicacion' placeholder='ingrese id de la publicación'></ion-input>
+  </ion-item>
+  <ion-button expand='block' (click)='buscarPublicacion()'>
+    <ion-icon name="search-outline"></ion-icon>
+    <ion-label>Buscar</ion-label>
+  </ion-button>
+  <ion-button expand='block' (click)='eliminarPublicacion()'>
+    <ion-icon name="close"></ion-icon>
+    <ion-label>Eliminar</ion-label>
+  </ion-button>
+
+  <ion-card >
+    <img src="{{imagen}}" />
+    <ion-card-header>
+    <ion-card-title>Publicación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Descripción:{{descripcion}}
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

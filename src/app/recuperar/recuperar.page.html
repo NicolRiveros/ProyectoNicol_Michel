@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">Recuperar contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <form>
+      <ion-item lines="full">
+        <b>Ingrese su correo electronico para poder recuperar su contraseña:</b>
+        <p></p>
+        <ion-label position="floating"><ion-icon name="person-outline"></ion-icon>Correo</ion-label>
+        <ion-input type="text" required></ion-input>
+  
+      </ion-item>
+  
+  
+        <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="secondary" onclick="MuestraMensajeValidar()" expand="block">Aceptar <ion-icon name="checkmark-outline"></ion-icon></ion-button>
+          
+          <ion-button type="submit" routerLink="/home" color="danger" expand="block">Volver <ion-icon name="arrow-undo-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+  
+    </form>
+  </ion-card>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+  </ion-toolbar>
+ 

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">Iniciar Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ingrese sus datos:</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img src="https://img.flaticon.com/icons/png/512/61/61205.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF"></ion-img>
+      
+      <form [formGroup]="formularioLogin" (ngSubmit)="UsuarioValidar()">
+
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="mail-open-outline"></ion-icon>Correo</ion-label>
+          <ion-input formControlName="email"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating"> <ion-icon name="lock-open-outline"></ion-icon>Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"> </ion-input>
+        </ion-item>
+        <br>
+        <ion-button color="secondary" expand="block" (click)='buscarUsuario()' type="ngSubmit">Ingresar<ion-icon name="log-in-outline"></ion-icon></ion-button>
+        
+        <ion-button routerLink="/home" type="submit" color="danger" expand="block">Volver <ion-icon name="arrow-undo-outline"></ion-icon></ion-button>
+      </form>
+
+      <div class="alert" *ngIf="mensaje">
+        {{mensaje}}
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

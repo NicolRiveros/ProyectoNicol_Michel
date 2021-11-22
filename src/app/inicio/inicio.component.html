@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title (click)="router.navigate(['/home']);">Pagina principal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-title>Escanee el código QR</ion-title>
+    <ion-img src="https://es.qr-code-generator.com/wp-content/themes/qr/new_structure/markets/core_market/generator/dist/generator/assets/images/websiteQRCode_noFrame.png"></ion-img>
+  </ion-card>
+  <ion-button (click)="router.navigate(['/home']);" type="submit" color="danger" expand="block">Salir <ion-icon name="exit-outline"></ion-icon></ion-button>
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Usuario</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="speakers">
+      <ion-icon name="document-text-outline"></ion-icon>
+      <ion-label>Solicitud</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+ 
+
