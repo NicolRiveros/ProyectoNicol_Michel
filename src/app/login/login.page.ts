@@ -40,7 +40,7 @@ export class LoginPage implements OnInit {
   }
 
   UsuarioValidar(){
-    if(this.formularioLogin.get('email').value=='nicol_michel@gmail.com' && this.formularioLogin.get('password').value=="12345")
+    if(this.formularioLogin.get('email').value=='admin' && this.formularioLogin.get('password').value=="admin")
     {
       this.router.navigate(['home/tabs/tab1'])
     }
